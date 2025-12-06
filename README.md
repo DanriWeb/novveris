@@ -34,6 +34,7 @@
 | **Backend**                 | **Nest.js**                                              | Модульная архитектура, Dependency Injection.                       |
 | **Database**                | **PostgreSQL**                                           | Реляционная база данных.                                           |
 | **Code Quality**            | **ESLint**, **Prettier**, **Stylelint**, **FSD Steiger** | Линтинг и форматирование.                                          |
+| **Commit Convention**       | **Conventional Commits**                                 | Стандарт написания сообщений коммитов.                             |
 | **Dev Tools / Performance** | **Lighthouse**, **React DevTools**                       | Проверка архитектуры, аналитика производительности, отладка React. |
 
 ## 3. Установка и запуск
