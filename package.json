@@ -1,0 +1,24 @@
+{
+  "name": "novveris-website",
+  "private": true,
+  "scripts": {
+    "dev:frontend": "npm --prefix apps/frontend run dev",
+    "dev:backend": "npm --prefix apps/backend run start:dev",
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "build:frontend": "npm --prefix apps/frontend run build",
+    "build:backend": "npm --prefix apps/backend run build",
+    "build": "npm run build:frontend && npm run build:backend",
+    "start:frontend": "npm --prefix apps/frontend run start",
+    "start:backend": "npm --prefix apps/backend run start:prod",
+    "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
+    "sync-configs": "copyfiles -f .prettierrc apps/frontend && copyfiles -f .prettierrc apps/backend"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "eslint-config-prettier": "^10.1.8"
+  }
+}

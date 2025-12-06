@@ -1,0 +1,5 @@
+{
+  "plugins": ["stylelint-scss"],
+  "extends": ["stylelint-config-standard", "stylelint-config-standard-scss"],
+  "rules": { "no-empty-source": null, "color-hex-length": "long" }
+}
