@@ -1,0 +1,32 @@
+@use "sass:list";
+@use "sass:map";
+@use "sass:math";
+@use "../variables/typography" as type;
+
+@function typo-map-sizes($sizes) {
+  $result-map: ();
+  $keys: type.$type-keys;
+
+  @if list.length($sizes) != list.length($keys) {
+    @error "Ошибка. Ожидается #{list.length($keys)} значений, получено #{list.length($sizes)}.";
+  }
+
+  @for $i from 1 through list.length($keys) {
+    $key: list.nth($keys, $i);
+    $raw-value: list.nth($sizes, $i);
+    $final-value: $raw-value;
+
+    @if math.is-unitless($raw-value) {
+      $final-value: $raw-value * 1px;
+    }
+
+    $result-map: map.merge(
+      $result-map,
+      (
+        $key: $final-value,
+      )
+    );
+  }
+
+  @return $result-map;
+}
