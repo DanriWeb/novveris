@@ -20,5 +20,8 @@
   "devDependencies": {
     "copyfiles": "^2.4.1",
     "eslint-config-prettier": "^10.1.8"
+  },
+  "overrides": {
+    "glob": ">=11.0.4"
   }
 }
