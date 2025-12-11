@@ -1,5 +1,5 @@
 @use "sass:map";
-@use "../variables/typo_semantic" as semantic;
+@use "../variables/typography/_semantic" as semantic;
 @use "../variables/breakpoints" as bp;
 
 @mixin typography($style-name, $breakpoint-map) {
