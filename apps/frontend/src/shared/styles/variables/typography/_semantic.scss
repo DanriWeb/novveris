@@ -1,5 +1,5 @@
 @use "sass:map";
-@use "fonts" as fonts;
+@use "../fonts" as fonts;
 @use "size_maps" as typo-maps;
 @use "../../functions/semantic_token_generator" as generator;
 
