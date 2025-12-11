@@ -6,7 +6,7 @@
     "fe:build": "npm --prefix apps/frontend run build",
     "fe:start": "npm --prefix apps/frontend run start",
     "fe:lint": "npm --prefix apps/frontend run lint",
-    "fe:stylelint": "npm --prefix apps/frontend run stylelint",
+    "fe:sl": "npm --prefix apps/frontend run sl",
     
     "be:dev": "npm --prefix apps/backend run start:dev",
     "be:build": "npm --prefix apps/backend run build",

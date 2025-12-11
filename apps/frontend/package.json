@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "stylelint": "stylelint --cache --cache-location ./node_modules/.cache/.stylelintcache \"src/**/*.scss\""
+    "sl": "stylelint --cache --cache-location ./node_modules/.cache/.stylelintcache \"src/**/*.scss\""
   },
   "dependencies": {
     "@tanstack/react-query": "^5.90.12",
