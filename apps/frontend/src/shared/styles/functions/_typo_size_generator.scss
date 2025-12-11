@@ -1,7 +1,7 @@
 @use "sass:list";
 @use "sass:map";
 @use "sass:math";
-@use "../variables/typography/base" as type;
+@use "../variables/typography/foundation" as type;
 
 /*
 Создает маппинг размеров шрифтов для конкретного брейкпоинта
