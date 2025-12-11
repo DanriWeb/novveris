@@ -1,0 +1,23 @@
+@use "../functions/typo_size_generator" as size_generator;
+
+$type-map-desktop-1: size_generator.typo-map-sizes(
+  (96, 71, 53, 39, 29, 22, 16, 12, 9)
+);
+$type-map-desktop-2: size_generator.typo-map-sizes(
+  (82, 61, 45, 34, 25, 19, 14, 11, 9)
+);
+$type-map-desktop-3: size_generator.typo-map-sizes(
+  (76, 56, 42, 31, 23, 18, 13, 10, 8)
+);
+$type-map-tablet-1: size_generator.typo-map-sizes(
+  (70, 52, 38, 28, 21, 16, 12, 9, 7)
+);
+$type-map-tablet-2: size_generator.typo-map-sizes(
+  (60, 45, 34, 26, 19, 15, 11, 9, 7)
+);
+$type-map-mobile-1: size_generator.typo-map-sizes(
+  (48, 38, 28, 20, 17, 14, 10, 8, 7)
+);
+$type-map-mobile-2: size_generator.typo-map-sizes(
+  (36, 30, 24, 17, 13, 10, 9, 8, 6)
+);

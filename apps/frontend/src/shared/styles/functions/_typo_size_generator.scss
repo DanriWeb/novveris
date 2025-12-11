@@ -3,9 +3,13 @@
 @use "sass:math";
 @use "../variables/typography" as type;
 
-@function typo-map-sizes($sizes) {
+/*
+Создает маппинг размеров шрифтов для конкретного брейкпоинта
+Принимает список размеров шрифтов и возвращает маппинг
+*/
+@function typo-map-sizes($sizes: ()) {
   $result-map: ();
-  $keys: type.$type-keys;
+  $keys: type.$typo-size-keys;
 
   @if list.length($sizes) != list.length($keys) {
     @error "Ошибка. Ожидается #{list.length($keys)} значений, получено #{list.length($sizes)}.";
