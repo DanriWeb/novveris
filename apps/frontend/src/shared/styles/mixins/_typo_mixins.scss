@@ -1,0 +1,44 @@
+@use "sass:map";
+@use "../variables/typo_semantic" as semantic;
+@use "../variables/breakpoints" as bp;
+
+@mixin typography($style-name, $breakpoint-map) {
+  $style: map.get($breakpoint-map, $style-name);
+
+  @if $style {
+    font-family: map.get($style, "font-family");
+    font-weight: map.get($style, "font-weight");
+    font-size: map.get($style, "font-size");
+    letter-spacing: map.get($style, "letter-spacing");
+  } @else {
+    @warn "Типографический стиль '#{$style-name}' не найден.";
+  }
+}
+
+@mixin typography-responsive($style-name) {
+  @include typography($style-name, semantic.$semantic-1920);
+
+  @media (max-width: map.get(bp.$breakpoints, "desktop-2")) {
+    @include typography($style-name, semantic.$semantic-1440);
+  }
+
+  @media (max-width: map.get(bp.$breakpoints, "desktop-3")) {
+    @include typography($style-name, semantic.$semantic-1280);
+  }
+
+  @media (max-width: map.get(bp.$breakpoints, "tablet-1")) {
+    @include typography($style-name, semantic.$semantic-1024);
+  }
+
+  @media (max-width: map.get(bp.$breakpoints, "tablet-2")) {
+    @include typography($style-name, semantic.$semantic-768);
+  }
+
+  @media (max-width: map.get(bp.$breakpoints, "mobile-1")) {
+    @include typography($style-name, semantic.$semantic-480);
+  }
+
+  @media (max-width: map.get(bp.$breakpoints, "mobile-2")) {
+    @include typography($style-name, semantic.$semantic-360);
+  }
+}

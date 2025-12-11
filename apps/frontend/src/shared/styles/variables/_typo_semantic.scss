@@ -1,0 +1,92 @@
+@use "sass:map";
+@use "fonts" as fonts;
+@use "typo_size_maps" as typo-maps;
+@use "../functions/semantic_token_generator" as generator;
+
+$semantic-tokens-config: (
+  "section-title": generator.token-config(fonts.$font-arturito, 700, "font-xl"),
+  "section-subtitle": generator.token-config(
+      fonts.$font-arturito,
+      700,
+      "font-l"
+    ),
+  "section-description": generator.token-config(
+      fonts.$font-inter,
+      400,
+      "font-s"
+    ),
+  "section-hero-title": generator.token-config(
+      fonts.$font-arturito,
+      700,
+      "font-2xl"
+    ),
+  "section-hero-subtitle": generator.token-config(
+      fonts.$font-arturito,
+      700,
+      "font-l"
+    ),
+  "block-description": generator.token-config(fonts.$font-inter, 500, "font-xs"),
+  "block-title-medium": generator.token-config(
+      fonts.$font-coolvetica,
+      400,
+      "font-l"
+    ),
+  "block-title-small": generator.token-config(
+      fonts.$font-coolvetica,
+      400,
+      "font-m"
+    ),
+  "block-subtitle-medium": generator.token-config(
+      fonts.$font-coolvetica,
+      400,
+      "font-m"
+    ),
+  "block-subtitle-small": generator.token-config(
+      fonts.$font-inter,
+      500,
+      "font-s"
+    ),
+  "element-logo-title": generator.token-config(
+      fonts.$font-arturito,
+      700,
+      "font-m"
+    ),
+  "element-button-label-medium": generator.token-config(
+      fonts.$font-coolvetica,
+      400,
+      "font-m"
+    ),
+  "element-button-label-small": generator.token-config(
+      fonts.$font-coolvetica,
+      400,
+      "font-s"
+    ),
+);
+$semantic-1920: generator.generate-semantic-tokens(
+  typo-maps.$type-map-desktop-1,
+  $semantic-tokens-config
+);
+$semantic-1440: generator.generate-semantic-tokens(
+  typo-maps.$type-map-desktop-2,
+  $semantic-tokens-config
+);
+$semantic-1280: generator.generate-semantic-tokens(
+  typo-maps.$type-map-desktop-3,
+  $semantic-tokens-config
+);
+$semantic-1024: generator.generate-semantic-tokens(
+  typo-maps.$type-map-tablet-1,
+  $semantic-tokens-config
+);
+$semantic-768: generator.generate-semantic-tokens(
+  typo-maps.$type-map-tablet-2,
+  $semantic-tokens-config
+);
+$semantic-480: generator.generate-semantic-tokens(
+  typo-maps.$type-map-mobile-1,
+  $semantic-tokens-config
+);
+$semantic-360: generator.generate-semantic-tokens(
+  typo-maps.$type-map-mobile-2,
+  $semantic-tokens-config
+);

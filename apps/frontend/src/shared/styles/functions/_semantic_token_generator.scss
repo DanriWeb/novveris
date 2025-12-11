@@ -1,0 +1,43 @@
+@use "sass:map";
+
+/*
+Создает конфигурацию семантического токена с дефолтными значениями
+*/
+@function token-config(
+  $font-family,
+  $font-weight,
+  $font-size-key,
+  $letter-spacing: 0.02em
+) {
+  @return (
+    font-family: $font-family,
+    font-weight: $font-weight,
+    font-size-key: $font-size-key,
+    letter-spacing: $letter-spacing
+  );
+}
+
+/*
+Генерирует семантические токены для конкретного брейкпоинта
+Принимает type-map (маппинг размеров шрифтов) и конфигурацию семантических токенов, возвращает полный набор токенов
+*/
+@function generate-semantic-tokens($type-map: (), $semantic-config: ()) {
+  $result: ();
+
+  @each $token-name, $token-config in $semantic-config {
+    $font-size-key: map.get($token-config, "font-size-key");
+    $result: map.merge(
+      $result,
+      (
+        $token-name: (
+            font-family: map.get($token-config, "font-family"),
+            font-weight: map.get($token-config, "font-weight"),
+            font-size: map.get($type-map, $font-size-key),
+            letter-spacing: map.get($token-config, "letter-spacing"),
+          ),
+      )
+    );
+  }
+
+  @return $result;
+}
