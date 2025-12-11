@@ -1,0 +1,21 @@
+/* stylelint-disable scss/dollar-variable-empty-line-before */
+@use "foundation" as *;
+
+$text-primary-on-light: $very-dark-purple-400;
+$text-primary-on-dark: $grayscale-100;
+$text-secondary-on-light: $light-vivid-purple-300;
+$text-secondary-on-dark: $grayscale-200;
+
+$bg-section-white: $grayscale-100;
+$bg-section-dark-purple: $very-dark-purple-400;
+$bg-section-light-purple: $very-dark-purple-300;
+
+$button-accent-1-on-light: $medium-dark-purple-100;
+$button-accent-1-on-dark: $medium-dark-purple-100;
+$button-accent-2-on-light: $medium-dark-purple-200;
+$button-accent-2-on-dark: $medium-dark-purple-200;
+$button-default-on-light: $very-dark-purple-300;
+$button-default-on-dark: $very-dark-purple-500;
+
+$icon-primary-on-dark: $grayscale-100;
+$icon-primary-on-light: $very-dark-purple-400;

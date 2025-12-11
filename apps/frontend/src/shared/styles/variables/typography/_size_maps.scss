@@ -1,4 +1,4 @@
-@use "../functions/typo_size_generator" as size_generator;
+@use "../../functions/typo_size_generator" as size_generator;
 
 $type-map-desktop-1: size_generator.typo-map-sizes(
   (96, 71, 53, 39, 29, 22, 16, 12, 9)
