@@ -1,31 +1,15 @@
+@use "../mixins/font_face" as *;
+@use "paths" as *;
+
 $font-arturito: arturito, serif;
 $font-coolvetica: coolvetica, sans-serif;
 $font-inter: inter, sans-serif;
 
-@font-face {
-  font-family: arturito;
-  src: url("../../assets/fonts/arturito/arturito.ttf") format("truetype");
-  font-weight: 700;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: coolvetica;
-  src: url("../../assets/fonts/coolvetica/coolvetica rg.ttf") format("truetype");
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: inter;
-  src: url("../../assets/fonts/inter/Inter-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: inter;
-  src: url("../../assets/fonts/inter/Inter-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-display: swap;
-}
+@include font-face(arturito, "#{$fonts-path}/arturito/arturito.ttf", 700);
+@include font-face(
+  coolvetica,
+  "#{$fonts-path}/coolvetica/coolvetica rg.ttf",
+  400
+);
+@include font-face(inter, "#{$fonts-path}/inter/Inter-Regular.ttf", 400);
+@include font-face(inter, "#{$fonts-path}/inter/Inter-Medium.ttf", 500);
