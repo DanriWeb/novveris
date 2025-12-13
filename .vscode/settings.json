@@ -18,5 +18,18 @@
   "editor.unicodeHighlight.nonBasicASCII": false,
 
   // 3. CONVENTIONAL COMMITS
-  "conventionalCommits.scopes": ["deps", "config"]
+  "conventionalCommits.scopes": [
+    "deps",
+    "config",
+    "scripts",
+    "styles",
+    "docs",
+    "ui",
+    "api",
+    "data",
+    "features",
+    "services",
+    "utils",
+    "tests"
+  ]
 }
