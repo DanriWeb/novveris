@@ -15,9 +15,7 @@
     
     "dev": "concurrently \"npm run fe:dev\" \"npm run be:dev\"",
     "build": "npm run fe:build && npm run be:build",
-    "start": "concurrently \"npm run fe:start\" \"npm run be:start\"",
-
-    "sync-configs": "copyfiles -f .prettierrc apps/frontend && copyfiles -f .prettierrc apps/backend"
+    "start": "concurrently \"npm run fe:start\" \"npm run be:start\""
   },
   "workspaces": [
     "apps/*",
