@@ -15,7 +15,11 @@
     
     "dev": "concurrently \"npm run fe:dev\" \"npm run be:dev\"",
     "build": "npm run fe:build && npm run be:build",
-    "start": "concurrently \"npm run fe:start\" \"npm run be:start\""
+    "start": "concurrently \"npm run fe:start\" \"npm run be:start\"",
+
+    "fe:i": "npm --prefix apps/frontend install",
+    "be:i": "npm --prefix apps/backend install",
+    "i": "npm run fe:i && npm run be:i"
   },
   "workspaces": [
     "apps/*",
