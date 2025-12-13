@@ -1,3 +1,9 @@
+## [1.3.0](https://github.com/DanriWeb/novveris/compare/v1.2.0...v1.3.0) (2025-12-13)
+
+### feat
+
+* **config:** настроить semantic-release с красивыми эмодзи ([a9a278417f249e5cde701029d16569f8a8912b27](https://github.com/DanriWeb/novveris/commit/a9a278417f249e5cde701029d16569f8a8912b27))
+
 ## [1.2.0](https://github.com/DanriWeb/novveris/compare/v1.1.0...v1.2.0) (2025-12-13)
 
 ### feat
