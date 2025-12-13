@@ -8,15 +8,12 @@
     "fe:lint": "npm --prefix apps/frontend run lint",
     "fe:sl": "npm --prefix apps/frontend run sl",
     "fe:sl:fix": "npm --prefix apps/frontend run sl:fix",
-    
     "be:dev": "npm --prefix apps/backend run start:dev",
     "be:build": "npm --prefix apps/backend run build",
     "be:start": "npm --prefix apps/backend run start:prod",
-    
     "dev": "concurrently \"npm run fe:dev\" \"npm run be:dev\"",
     "build": "npm run fe:build && npm run be:build",
     "start": "concurrently \"npm run fe:start\" \"npm run be:start\"",
-
     "fe:i": "npm --prefix apps/frontend install",
     "be:i": "npm --prefix apps/backend install",
     "i": "npm run fe:i && npm run be:i"
@@ -26,10 +23,16 @@
     "packages/*"
   ],
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "conventional-changelog-conventionalcommits": "^9.1.0",
     "copyfiles": "^2.4.1",
-    "eslint-config-prettier": "^10.1.8"
+    "eslint-config-prettier": "^10.1.8",
+    "semantic-release": "^24.2.9"
   },
   "overrides": {
-    "glob": ">=11.0.4"
-  }
+    "glob": ">=11.0.4",
+    "npm": "11.7.0"
+  },
+  "version": "1.0.0"
 }
