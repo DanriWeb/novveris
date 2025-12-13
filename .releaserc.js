@@ -39,21 +39,8 @@ module.exports = {
     [
       "@semantic-release/changelog",
       {
-        preset: "conventionalcommits",
-        presetConfig: {
-          types: [
-            { type: "feat", section: "🚀 Features" },
-            { type: "fix", section: "🔧 Fixes" },
-            { type: "docs", section: "📝 Docs" },
-            { type: "style", section: "💎 Styles" },
-            { type: "refactor", section: "♻️ Refactor" },
-            { type: "perf", section: "⚡ Performance" },
-            { type: "test", section: "✅ Tests" },
-            { type: "build", section: "🏗️ Build" },
-            { type: "ci", section: "👷 CI" },
-            { type: "chore", section: "🛠️ Chore" },
-          ],
-        },
+        changelogFile: "CHANGELOG.md",
+        changelogTitle: "# Changelog",
       },
     ],
     "@semantic-release/npm",
