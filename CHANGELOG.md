@@ -1,3 +1,9 @@
+## [1.3.2](https://github.com/DanriWeb/novveris/compare/v1.3.1...v1.3.2) (2025-12-13)
+
+### fix
+
+* **config:** исправить отображение эмодзи в CHANGELOG ([d37796c490b630aa5b4559122403870781981cd2](https://github.com/DanriWeb/novveris/commit/d37796c490b630aa5b4559122403870781981cd2))
+
 ## [1.3.1](https://github.com/DanriWeb/novveris/compare/v1.3.0...v1.3.1) (2025-12-13)
 
 ### fix
