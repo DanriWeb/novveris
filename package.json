@@ -8,24 +8,34 @@
     "fe:lint": "npm --prefix apps/frontend run lint",
     "fe:sl": "npm --prefix apps/frontend run sl",
     "fe:sl:fix": "npm --prefix apps/frontend run sl:fix",
-    
     "be:dev": "npm --prefix apps/backend run start:dev",
     "be:build": "npm --prefix apps/backend run build",
     "be:start": "npm --prefix apps/backend run start:prod",
-    
     "dev": "concurrently \"npm run fe:dev\" \"npm run be:dev\"",
     "build": "npm run fe:build && npm run be:build",
-    "start": "concurrently \"npm run fe:start\" \"npm run be:start\""
+    "start": "concurrently \"npm run fe:start\" \"npm run be:start\"",
+    "fe:i": "npm --prefix apps/frontend install",
+    "be:i": "npm --prefix apps/backend install",
+    "i": "npm run fe:i && npm run be:i"
   },
   "workspaces": [
     "apps/*",
     "packages/*"
   ],
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.0",
+    "@semantic-release/exec": "github:semantic-release/exec",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^11.0.0",
+    "@semantic-release/npm": "^13.1.3",
+    "@semantic-release/release-notes-generator": "^14.0.1",
+    "conventional-changelog-conventionalcommits": "^9.1.0",
     "copyfiles": "^2.4.1",
-    "eslint-config-prettier": "^10.1.8"
+    "eslint-config-prettier": "^10.1.8",
+    "semantic-release": "^25.0.2"
   },
   "overrides": {
-    "glob": ">=11.0.4"
+    "glob": ">=12.0.0"
   }
 }
