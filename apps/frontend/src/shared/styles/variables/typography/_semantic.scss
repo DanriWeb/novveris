@@ -1,7 +1,7 @@
 @use "sass:map";
 @use "../fonts" as fonts;
 @use "size_maps" as typo-maps;
-@use "../../functions/semantic_token_generator" as generator;
+@use "../../functions/typo_token_generator" as generator;
 
 $semantic-tokens-config: (
   "section-title": generator.token-config(fonts.$font-arturito, 700, "font-xl"),
