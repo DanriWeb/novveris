@@ -1,0 +1,94 @@
+@use "../../functions/spacing_token_generator" as *;
+@use "foundation" as *;
+
+// ============================================================================
+// SEMANTIC TOKENS - MOBILE
+// ============================================================================
+
+$spacing-mobile-360: generate-spacing-tokens(
+  $page-horizontal: $spacing-16,
+  $page-vertical: $spacing-8,
+  $section-title-to-blocks: $spacing-32,
+  $section-vertical: $spacing-48,
+  $section-title-to-subtitle: $spacing-24,
+  $block-large: $spacing-44,
+  $block-middle: $spacing-20,
+  $block-small: $spacing-16,
+  $block-nav-title-to-blocks: $spacing-12,
+);
+$spacing-mobile-480: generate-spacing-tokens(
+  $page-horizontal: $spacing-24,
+  $page-vertical: $spacing-12,
+  $section-title-to-blocks: $spacing-40,
+  $section-vertical: $spacing-52,
+  $section-title-to-subtitle: $spacing-28,
+  $block-large: $spacing-52,
+  $block-middle: $spacing-28,
+  $block-small: $spacing-24,
+  $block-nav-title-to-blocks: $spacing-16,
+);
+
+// ============================================================================
+// SEMANTIC TOKENS - TABLET
+// ============================================================================
+
+$spacing-tablet-768: generate-spacing-tokens(
+  $page-horizontal: $spacing-28,
+  $page-vertical: $spacing-16,
+  $section-title-from-blocks: $spacing-44,
+  $section-vertical: $spacing-52,
+  $section-title-to-subtitle: $spacing-32,
+  $block-large: $spacing-70,
+  $block-middle: $spacing-32,
+  $block-small: $spacing-28,
+  $block-nav-title-to-blocks: $spacing-20,
+);
+$spacing-tablet-1024: generate-spacing-tokens(
+  $page-horizontal: $spacing-70,
+  $page-vertical: $spacing-16,
+  $section-title-to-blocks: $spacing-48,
+  $section-vertical: $spacing-70,
+  $section-title-to-subtitle: $spacing-40,
+  $block-large: $spacing-80,
+  $block-middle: $spacing-36,
+  $block-small: $spacing-28,
+  $block-nav-title-to-blocks: $spacing-24,
+);
+
+// ============================================================================
+// SEMANTIC TOKENS - DESKTOP
+// ============================================================================
+
+$spacing-desktop-1280: generate-spacing-tokens(
+  $page-horizontal: $spacing-96,
+  $page-vertical: $spacing-24,
+  $section-title-to-blocks: $spacing-52,
+  $section-vertical: $spacing-80,
+  $section-title-to-subtitle: $spacing-40,
+  $block-large: $spacing-80,
+  $block-middle: $spacing-44,
+  $block-small: $spacing-36,
+  $block-nav-title-to-blocks: $spacing-32,
+);
+$spacing-desktop-1440: generate-spacing-tokens(
+  $page-horizontal: $spacing-116,
+  $page-vertical: $spacing-24,
+  $section-title-to-blocks: $spacing-70,
+  $section-vertical: $spacing-96,
+  $section-title-to-subtitle: $spacing-40,
+  $block-vertical-large: $spacing-96,
+  $block-vertical-middle: $spacing-48,
+  $block-vertical-small: $spacing-40,
+  $block-nav-title-to-blocks: $spacing-36,
+);
+$spacing-desktop-1920: generate-spacing-tokens(
+  $page-horizontal: $spacing-120,
+  $page-vertical: $spacing-32,
+  $section-title-to-blocks: $spacing-80,
+  $section-vertical: $spacing-116,
+  $section-title-to-subtitle: $spacing-44,
+  $block-large: $spacing-116,
+  $block-middle: $spacing-52,
+  $block-small: $spacing-48,
+  $block-nav-title-to-blocks: $spacing-44,
+);

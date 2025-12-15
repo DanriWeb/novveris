@@ -1,0 +1,111 @@
+@use "sass:map";
+
+// ============================================================================
+// SPACING TOKEN GENERATOR
+// ============================================================================
+
+@function generate-spacing-tokens(
+  $page-horizontal,
+  $page-vertical,
+  $section-title-to-blocks: null,
+  $section-title-from-blocks: null,
+  $section-vertical,
+  $section-title-to-subtitle,
+  $block-large: null,
+  $block-middle: null,
+  $block-small: null,
+  $block-vertical-large: null,
+  $block-vertical-middle: null,
+  $block-vertical-small: null,
+  $block-nav-title-to-blocks
+) {
+  $section-map: (
+    section-vertical: $section-vertical,
+    title-to-subtitle: $section-title-to-subtitle,
+  );
+
+  @if $section-title-to-blocks {
+    $section-map: map.merge(
+      $section-map,
+      (
+        title-to-blocks: $section-title-to-blocks,
+      )
+    );
+  }
+
+  @if $section-title-from-blocks {
+    $section-map: map.merge(
+      $section-map,
+      (
+        title-from-blocks: $section-title-from-blocks,
+      )
+    );
+  }
+
+  $block-map: (
+    nav-title-to-blocks: $block-nav-title-to-blocks,
+  );
+
+  @if $block-large {
+    $block-map: map.merge(
+      $block-map,
+      (
+        block-large: $block-large,
+      )
+    );
+  }
+
+  @if $block-middle {
+    $block-map: map.merge(
+      $block-map,
+      (
+        block-middle: $block-middle,
+      )
+    );
+  }
+
+  @if $block-small {
+    $block-map: map.merge(
+      $block-map,
+      (
+        block-small: $block-small,
+      )
+    );
+  }
+
+  @if $block-vertical-large {
+    $block-map: map.merge(
+      $block-map,
+      (
+        block-vertical-large: $block-vertical-large,
+      )
+    );
+  }
+
+  @if $block-vertical-middle {
+    $block-map: map.merge(
+      $block-map,
+      (
+        block-vertical-middle: $block-vertical-middle,
+      )
+    );
+  }
+
+  @if $block-vertical-small {
+    $block-map: map.merge(
+      $block-map,
+      (
+        block-vertical-small: $block-vertical-small,
+      )
+    );
+  }
+
+  @return (
+    page: (
+      horizontal: $page-horizontal,
+      vertical: $page-vertical,
+    ),
+    section: $section-map,
+    block: $block-map
+  );
+}
