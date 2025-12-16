@@ -1,18 +1,10 @@
 /*
 Миксин для создания @font-face декларации
 */
-@mixin font-face(
-  $family,
-  $file-path,
-  $weight: 400,
-  $style: normal,
-  $display: swap
-) {
+@mixin font-face($family, $file-path, $weight: 400) {
   @font-face {
     font-family: $family;
     src: url($file-path) format("truetype");
     font-weight: $weight;
-    font-style: $style;
-    font-display: $display;
   }
 }
