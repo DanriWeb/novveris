@@ -19,18 +19,37 @@
 
   // 3. CONVENTIONAL COMMITS
   "conventionalCommits.scopes": [
+    "app",
+    "ui",
+    "components",
+    "features",
+    "pages",
+    "layouts",
+
+    "api",
+    "services",
+    "data",
+    "store",
+
+    "utils",
+    "hooks",
+    "types",
+
+    "styles",
+    "assets",
+
+    "tests",
+    "docs",
+
     "deps",
     "config",
     "scripts",
-    "styles",
-    "docs",
-    "ui",
-    "api",
-    "data",
-    "features",
-    "services",
-    "utils",
-    "tests",
-    "components"
+    "ci",
+
+    "build",
+    "tooling",
+
+    "monorepo",
+    "workspace"
   ]
 }
